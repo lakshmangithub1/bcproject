@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Graphs from './Component/Graphs';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from './Component/NavBar';
+import ProfileCard from './Component/ProfileCard';
+import ActiveCard from './Component/ActiveCard';
+import {PieChart, Pie, Tooltip, BarChart, XAxis, YAxis, Legend, CartesianGrid, Bar, LineChart, Line} from "recharts";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+const App = () => <div > 
+  <NavBar/>
+  <div className='bg'>
+    <ProfileCard />
+    <ActiveCard />
+    <ActiveCard />
+    <ActiveCard />
+    <ActiveCard />
+    
+  </div>
+  <Graphs />
+  
+</div>
+
+  
 
 export default App;

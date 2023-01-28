@@ -1,0 +1,9 @@
+.nav-bg {
+    background-color: #09091c;
+    background-size: cover;
+    width: 100vw;
+} 
+
+Nav.Link {
+    color: #ffffff;
+}
