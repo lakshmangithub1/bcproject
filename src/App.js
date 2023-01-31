@@ -48,7 +48,7 @@ const App = () => {
           <BookingCard/>
           <BookingCardT/>
         </div>
-        <Graphs/>
+        <Graphs dataSet = {data}/>
         
       </div>
 

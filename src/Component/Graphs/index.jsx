@@ -3,15 +3,11 @@ import './index.css'
 import {PieChart, Pie, Tooltip, BarChart, XAxis, YAxis, Legend, CartesianGrid, Bar, LineChart, Line} from "recharts";
 
 
-const Graphs = () => {
+const Graphs = props => {
 
-  const data = [
-    {name:"Google", users:533524, revenue:5227124},
-    {name:"Twitter", users:412534, revenue:2441133},
-    {name:"instagram", users:912534, revenue:5857212},
-    {name:"Telegram", users:255454, revenue:1555824},
-    {name:"Whatsapp", users:2213334, revenue:3152154},
-  ]
+  const {dataSet} = props 
+  const {end_year, intensity} = dataSet 
+  const finalData = dataSet.filter((item => item.intensity == '48'))
 
   return (
     <>
@@ -24,8 +20,8 @@ const Graphs = () => {
             left: 20,
             bottom: 10,
           }}>
-        <Pie data={data} dataKey="users" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" />
-        <Pie data={data} dataKey="revenue" cx="50%" cy="50%" innerRadius={70} outerRadius={90} fill="#82ca9d" label />
+        <Pie data={dataSet} dataKey="users" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" />
+        <Pie data={dataSet} dataKey="revenue" cx="50%" cy="50%" innerRadius={70} outerRadius={90} fill="#82ca9d" label />
     <Tooltip/>
     </PieChart>
 
@@ -33,7 +29,7 @@ const Graphs = () => {
           width={300}
           height={200}
           
-          data={data}
+          data={finalData}
           margin={{
             top: 10,
             right: 30,
@@ -54,7 +50,7 @@ const Graphs = () => {
       <LineChart
           width={300}
           height={200}
-          data={data}
+          data={finalData}
           margin={{
             top: 20,
             right: 30,
