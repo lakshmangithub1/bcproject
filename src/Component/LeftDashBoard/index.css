@@ -1,9 +1,5 @@
 .left-card {
-    background-color: #0a182b;
-    width: 20%;
-    height: 100%;
-    border: 0px solid #0a182b;
-    border-radius: 15px;
+   
     display: none;
 } 
 
@@ -50,4 +46,71 @@
 }
 .cc {
     margin-top: 10px;
+} 
+
+
+@media screen and (min-width:992px) {
+    .maincard {
+        display: none;
+    }
+    .left-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #101e33;
+        width: 20vw;
+        height: 92vh;
+        border: 0px solid #101e33;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    } 
+
+    .butt-row {
+        color: #ffffff;
+        background-color: #F3797E;
+        border: 0px solid #F3797E;
+        border-radius: 8px;
+        width:85%;
+        margin-top: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 22px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    .dash-butt {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        color: #ffffff;
+        background-color: #F3797E;
+        border: 0px solid #F3797E;
+        border-radius: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        outline: none;
+        cursor: pointer;
+        align-self: stretch;
+        margin: 15px;
+        
+    
+    } 
+    
+    .name-card {
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+        
+    }
+    
+    .name-head {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+        color: #475569;
+        font-weight: 200;
+    }
+
+    
 }

@@ -35,9 +35,17 @@
     justify-content: space-between;
   } 
   .bg {
+    
+    background-size: cover;
+  }
+} 
+
+@media screen and (min-height:1025px) {
+  .bg {
     height: 100vh;
     background-size: cover;
   }
+  
 }
 
 
@@ -45,23 +53,13 @@
   .bg {
     
     background-size: cover;
-    
+    height: 100vh;
     flex-direction: row;
     align-items: center;
     padding: 20px;
   } 
   
-  .second-bg {
-    background-color: #ffffff;
-    width: 80%;
-    height: 100%;
-    background-size: cover;
-    border: 0px solid #ffffff;
-    border-radius: 15px;
-    margin-left: 15px;
-    display: flex;
-    flex-direction: row;
-  }
+  
 }
 
 

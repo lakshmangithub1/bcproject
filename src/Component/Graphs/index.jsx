@@ -3,16 +3,21 @@ import './index.css'
 import {PieChart, Pie, Tooltip, BarChart, XAxis, YAxis, Legend, CartesianGrid, Bar, LineChart, Line} from "recharts";
 
 
-const Graphs = props => {
+const Graphs = () => {
 
-  const {dataSet} = props 
-  const {end_year, intensity} = dataSet 
-  const finalData = dataSet.filter((item => item.intensity == '48'))
+  const data = [
+    {name:"Google", users:533524, revenue:5227124},
+    {name:"Twitter", users:412534, revenue:2441133},
+    {name:"instagram", users:912534, revenue:5857212},
+    {name:"Telegram", users:255454, revenue:1555824},
+    {name:"Whatsapp", users:2213334, revenue:3152154},
+  ]
 
   return (
     <>
     
     <div className="App"> 
+    
 
     <PieChart width={200} height={200} margin={{
             top: 10,
@@ -20,16 +25,18 @@ const Graphs = props => {
             left: 20,
             bottom: 10,
           }}>
-        <Pie data={dataSet} dataKey="users" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" />
-        <Pie data={dataSet} dataKey="revenue" cx="50%" cy="50%" innerRadius={70} outerRadius={90} fill="#82ca9d" label />
+        <Pie data={data} dataKey="users" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" />
+        <Pie data={data} dataKey="revenue" cx="50%" cy="50%" innerRadius={70} outerRadius={90} fill="#82ca9d" label />
     <Tooltip/>
-    </PieChart>
+    </PieChart> 
+    </div>
 
+    <div className='App'>
     <BarChart
           width={300}
           height={200}
           
-          data={finalData}
+          data={data}
           margin={{
             top: 10,
             right: 30,
@@ -47,15 +54,17 @@ const Graphs = props => {
           <Bar dataKey="revenue" fill="#82ca9d" />
         </BarChart> 
 
-      <LineChart
+    </div> 
+    <div className='App'>
+    <LineChart
           width={300}
           height={200}
-          data={finalData}
+          data={data}
           margin={{
-            top: 20,
+            top: 10,
             right: 30,
             left: 20,
-            bottom: 10,
+            bottom: 5,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
@@ -66,11 +75,15 @@ const Graphs = props => {
           <Line type="monotone" dataKey="users" stroke="#8884d8" activeDot={{ r: 8 }} />
           <Line type="monotone" dataKey="revenue" stroke="#82ca9d" />
         </LineChart> 
-
-
-
-
     </div>
+
+
+      
+
+
+
+
+    
     </>
   );
 };
