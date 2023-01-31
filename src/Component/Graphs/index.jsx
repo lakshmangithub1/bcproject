@@ -16,18 +16,31 @@ const Graphs = () => {
   return (
     <>
     
-    <div className="App">
+    <div className="App"> 
 
-    <BarChart
-          width={500}
-          height={300}
-          data={data}
-          margin={{
-            top: 5,
+    <PieChart width={200} height={200} margin={{
+            top: 10,
             right: 30,
             left: 20,
-            bottom: 5,
+            bottom: 10,
+          }}>
+        <Pie data={data} dataKey="users" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" />
+        <Pie data={data} dataKey="revenue" cx="50%" cy="50%" innerRadius={70} outerRadius={90} fill="#82ca9d" label />
+    <Tooltip/>
+    </PieChart>
+
+    <BarChart
+          width={300}
+          height={200}
+          
+          data={data}
+          margin={{
+            top: 10,
+            right: 30,
+            left: 20,
+            bottom: 10,
           }}
+          
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
@@ -36,7 +49,28 @@ const Graphs = () => {
           <Legend />
           <Bar dataKey="users" fill="#8884d8" />
           <Bar dataKey="revenue" fill="#82ca9d" />
-        </BarChart>
+        </BarChart> 
+
+      <LineChart
+          width={300}
+          height={200}
+          data={data}
+          margin={{
+            top: 20,
+            right: 30,
+            left: 20,
+            bottom: 10,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line type="monotone" dataKey="users" stroke="#8884d8" activeDot={{ r: 8 }} />
+          <Line type="monotone" dataKey="revenue" stroke="#82ca9d" />
+        </LineChart> 
+
 
 
 

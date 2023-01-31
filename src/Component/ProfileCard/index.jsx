@@ -3,7 +3,7 @@ import './index.css'
 
 const ProfileCard = () => {
     return(
-        <div class="main-card">
+        <div className="main-card">
             <h4 className='main-head'>Welcome to your Dashboard</h4>
             <hr className='line2'/> 
             <h1 className='id-head'>1232-4322-6565</h1>

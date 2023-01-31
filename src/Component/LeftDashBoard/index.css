@@ -1,39 +1,53 @@
-.dashboard-card {
-    background-color: #ffffff;
-    height: 92.5vh;
-    width: 20vw; 
+.left-card {
+    background-color: #0a182b;
+    width: 20%;
+    height: 100%;
+    border: 0px solid #0a182b;
+    border-radius: 15px;
+    display: none;
+} 
+
+.maincard {
+    background-color: #0a182b;
+    border: 0px solid #0a182b;
+    border-radius: 3px;
+    width: 95vw;
+    margin-top: 10px;
+    
+    padding: 5px;
+    
     display: flex;
     flex-direction: column;
-    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 } 
 
-.dash-butt {
-    font-family: "Roboto";
-    color: #ffffff;
-    background-color: #4B49AC;
-    border: 0px solid #4B49AC;
-    border-radius: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    outline: none;
-    cursor: pointer;
-    align-self: stretch;
-    margin: 10px;
-    
+.white-head {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #F3797E;
+    font-size: 22px;
+    margin-left: 10px;
 
 } 
 
-.name-card {
+.white-logo {
+    color: #ffffff; 
+    font-size: 22px;
+    margin-right: 10px;
+} 
+
+.mm-head {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: aliceblue;
+    font-size: 19px;
+    margin-left: 10px;
+    margin-bottom:15px;
+} 
+
+.mm-card {
     display: flex;
     flex-direction: row;
-    margin-top: 15px;
+    justify-content: space-between;
 }
-
-.name-head {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 15px;
-    color: #475569;
-    font-weight: 200;
+.cc {
+    margin-top: 10px;
 }
