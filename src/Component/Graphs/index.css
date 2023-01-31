@@ -3,6 +3,14 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 15px;
+    background-color: #ffffff;
+    border: 0px solid #ffffff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
   }
   
   .App-logo {

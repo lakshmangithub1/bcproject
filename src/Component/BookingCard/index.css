@@ -1,0 +1,48 @@
+.booking-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    background-color: #98BDFF;
+    width: 180px;
+    height: 140px;
+    border: 0px solid #98BDFF;
+    border-radius: 20px;
+    padding-left: 15px;
+    margin: 20px;
+    align-self: flex-start;
+
+} 
+
+.dark-blue {
+    background-color: #4B49AC;
+}
+
+.orange {
+    background-color: #F3797E;
+}
+
+.med-blue {
+    background-color: #7978E9;
+}
+
+.book-para {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    margin-top: 15px;
+    font-size: 18px;
+} 
+
+.book-head {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+} 
+
+.day-para {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    margin-top: 0px;
+    font-size: 16px;
+}

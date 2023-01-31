@@ -12,7 +12,7 @@ const ProfileCard = () => {
             <div className='bottom-card'>
                 <div className='name-card'>
                     <h5 className='name'>Akash Andrew</h5>
-                    <p className='join-date'>Member since 24/03/2010</p>
+                   
                 </div>
                 <h4 className='membership'>View your Membership</h4>
             </div>
